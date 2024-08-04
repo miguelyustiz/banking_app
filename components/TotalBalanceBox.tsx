@@ -1,5 +1,7 @@
 import { formatAmount } from "@/lib/utils";
 import React from "react";
+import CountUp from "react-countup";
+import AnimatedCounter from "./AnimatedCounter";
 
 const TotalBalanceBox = ({
   accounts = [],
@@ -18,7 +20,7 @@ const TotalBalanceBox = ({
             Total Current Balance
           </p>
           <p className="total-balance-amount flex-center gap-2 dark:text-white">
-            {formatAmount(totalCurrentBalance)}
+            <AnimatedCounter amount={totalCurrentBalance} />
           </p>
         </div>
       </div>
