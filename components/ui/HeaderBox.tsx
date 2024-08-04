@@ -1,5 +1,5 @@
-import { Span } from "next/dist/trace";
 import React from "react";
+import { DarkModeToggle } from "../DarkModeToggle";
 
 const HeaderBox = ({
   type = "title",
@@ -9,13 +9,14 @@ const HeaderBox = ({
 }: HeaderBoxProps) => {
   return (
     <div className="header-box">
-      <h1 className="header-box-title">
+      <h1 className="header-box-title dark:text-white">
         {title}
         {type === "greeting" && (
           <span className="text-bankGradient"> {user}</span>
         )}
       </h1>
-      <p className="header-box-subtext">{subtext}</p>
+      <p className="header-box-subtext dark:text-white/70">{subtext}</p>
+      <DarkModeToggle />
     </div>
   );
 };
