@@ -1,5 +1,4 @@
 import React from "react";
-import { DarkModeToggle } from "../DarkModeToggle";
 
 const HeaderBox = ({
   type = "title",
@@ -16,7 +15,6 @@ const HeaderBox = ({
         )}
       </h1>
       <p className="header-box-subtext dark:text-white/70">{subtext}</p>
-      <DarkModeToggle />
     </div>
   );
 };

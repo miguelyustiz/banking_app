@@ -1,3 +1,5 @@
+import { DarkModeToggle } from "@/components/DarkModeToggle";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -5,7 +7,8 @@ export default function RootLayout({
 }>) {
   return (
     <main>
-      SIDEBAR
+      <DarkModeToggle />
+      // Todo: sidebar
       {children}
     </main>
   );
